@@ -13,3 +13,5 @@ Route::get('/eventos/{id}', [EventoController::class, 'show'])
 Route::fallback(function () {
     return response()->view('errors.404', [], 404);
 });
+
+#
