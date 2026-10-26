@@ -14,7 +14,7 @@
         <p>Data: {{ date('d/m/Y', strtotime($evento['data'])) }}</p>
         <p>Local: {{ $evento['local'] }}</p>
         <p>Inscritos: {{ $evento['inscritos'] }} de {{ $evento['vagas'] }}</p>
-        <p><a href="/eventos">Voltar aos eventos</a></p>
+        <p><a href="/eventos">Voltar aos eventos!</a></p>
     </main>
 </body>
 </html>
