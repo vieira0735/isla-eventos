@@ -41,6 +41,7 @@
                 @endforelse
             </tbody>
         </table>
+                <p><a href="/">Voltar ao início</a></p>
     </main>
 </body>
 </html>
