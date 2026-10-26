@@ -11,7 +11,7 @@
     <main class="container">
         <h1>404 · Página não encontrada</h1>
         <p>A página que procuras não existe.</p>
-        <p><a href="/eventos" role="button">Ver eventos!</a></p>
+        <p><a href="{{ route('eventos.index') }}" role="button">Ver eventos</a></p>
     </main>
 </body>
 </html>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{{ config('app.name') }}</title>
+    <title>{{ $evento['titulo'] }} · {{ config('app.name') }}</title>
     <link rel="stylesheet"
           href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
 </head>
@@ -14,7 +14,7 @@
         <p>Data: {{ date('d/m/Y', strtotime($evento['data'])) }}</p>
         <p>Local: {{ $evento['local'] }}</p>
         <p>Inscritos: {{ $evento['inscritos'] }} de {{ $evento['vagas'] }}</p>
-        <p><a href="/eventos">Voltar aos eventos!</a></p>
+        <p><a href="{{ route('eventos.index') }}">Voltar aos eventos</a></p>
     </main>
 </body>
 </html>
