@@ -5,5 +5,5 @@
     <h3>
         <a href="{{ route('eventos.show', $evento->id) }}">{{ $evento->titulo }}</a>
     </h3>
-    <p>{{ date('d/m/Y', strtotime($evento->data)) }} · {{ $evento->local }}</p>
+    <p>{{ $evento->data->format('d/m/Y') }} · {{ $evento->local }}</p>
 </article>

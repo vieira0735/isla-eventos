@@ -9,7 +9,7 @@
 
     <h1>{{ $evento->titulo }}</h1>
     <p>Tipo: {{ $evento->tipo }}</p>
-    <p>Data: {{ date('d/m/Y', strtotime($evento->data)) }}</p>
+    <p>Data: {{ $evento->data->format('d/m/Y') }}</p>
     <p>Local: {{ $evento->local }}</p>
     <p>Inscritos: {{ $evento->inscritos }} de {{ $evento->vagas }}</p>
     @if (!empty($evento->descricao))

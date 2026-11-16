@@ -6,8 +6,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [InicioController::class, 'index'])->name('inicio');
 Route::get('/eventos', [EventoController::class, 'index'])->name('eventos.index');
-Route::get('/eventos/{id}', [EventoController::class, 'show'])
-    ->whereNumber('id')
+Route::get('/eventos/{evento}', [EventoController::class, 'show'])
+    ->whereNumber('evento')
     ->name('eventos.show');
 
 Route::fallback(function () {

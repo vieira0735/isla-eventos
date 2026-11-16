@@ -2,14 +2,14 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Support\Facades\DB;
+use App\Models\Evento;
 use Illuminate\View\View;
 
 class InicioController extends Controller
 {
     public function index(): View
     {
-        $proximos = DB::table('eventos')
+        $proximos = Evento::query()
             ->where('data', '>=', now()->toDateString())
             ->orderBy('data')
             ->limit(3)
