@@ -12,7 +12,7 @@
         <a href="{{ route('eventos.index', ['tipo' => 'hackathon']) }}">hackathons</a>
     </p>
 
-    @if (count($eventos) === 0)
+    @if ($eventos->isEmpty())
         <x-alerta tipo="aviso">Não há eventos para mostrar.</x-alerta>
     @endif
 
@@ -24,13 +24,13 @@
             @foreach ($eventos as $evento)
                 <tr>
                     <td>{{ $loop->iteration }}</td>
-                    <td><a href="{{ route('eventos.show', $evento['id']) }}">{{ $evento['titulo'] }}</a></td>
-                    <td>{{ date('d/m/Y', strtotime($evento['data'])) }}</td>
+                    <td><a href="{{ route('eventos.show', $evento->id) }}">{{ $evento->titulo }}</a></td>
+                    <td>{{ date('d/m/Y', strtotime($evento->data)) }}</td>
                     <td>
-                        @if ($evento['inscritos'] >= $evento['vagas'])
+                        @if ($evento->inscritos >= $evento->vagas)
                             <strong>Esgotado</strong>
                         @else
-                            {{ $evento['vagas'] - $evento['inscritos'] }}
+                            {{ $evento->vagas - $evento->inscritos }}
                         @endif
                     </td>
                 </tr>
