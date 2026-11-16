@@ -12,30 +12,35 @@ class EventoSeeder extends Seeder
         DB::table('eventos')->insert([
             'titulo' => 'Workshop de Laravel', 'tipo' => 'workshop',
             'data' => '2026-11-18', 'local' => 'Laboratório 2.05',
+            'descricao' => 'Aprende as bases do Laravel: rotas, controllers e views.',
             'vagas' => 20, 'inscritos' => 12,
             'created_at' => now(), 'updated_at' => now(),
         ]);
         DB::table('eventos')->insert([
             'titulo' => 'Palestra: Carreiras em Cibersegurança', 'tipo' => 'palestra',
             'data' => '2026-11-25', 'local' => 'Auditório',
+            'descricao' => 'Profissionais da área falam sobre percursos e oportunidades.',
             'vagas' => 120, 'inscritos' => 120,
             'created_at' => now(), 'updated_at' => now(),
         ]);
         DB::table('eventos')->insert([
             'titulo' => 'Hackathon ISLA 24h', 'tipo' => 'hackathon',
             'data' => '2026-11-06', 'local' => 'Átrio principal',
+            'descricao' => null,
             'vagas' => 60, 'inscritos' => 41,
             'created_at' => now(), 'updated_at' => now(),
         ]);
         DB::table('eventos')->insert([
             'titulo' => 'Git e GitHub para iniciantes', 'tipo' => 'workshop',
             'data' => '2026-09-30', 'local' => 'Laboratório 1.02',
+            'descricao' => null,
             'vagas' => 25, 'inscritos' => 25,
             'created_at' => now(), 'updated_at' => now(),
         ]);
         DB::table('eventos')->insert([
             'titulo' => 'Conversa com antigos alunos DWDM', 'tipo' => 'palestra',
             'data' => '2026-12-02', 'local' => 'Sala 3.10',
+            'descricao' => null,
             'vagas' => 40, 'inscritos' => 9,
             'created_at' => now(), 'updated_at' => now(),
         ]);
