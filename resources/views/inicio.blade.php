@@ -1,21 +1,14 @@
-@extends('layouts.app')
-
-@section('titulo', 'Início')
-
 @section('conteudo')
     <h1>{{ config('app.name') }}</h1>
     <p>Workshops, palestras e hackathons do ISLA Gaia.</p>
     <p><a href="{{ route('eventos.index') }}" role="button">Ver eventos</a></p>
 
     <h2>Próximos eventos</h2>
-    <ul>
+    <div class="grelha">
         @forelse ($proximos as $evento)
-            <li>
-                <a href="{{ route('eventos.show', $evento['id']) }}">{{ $evento['titulo'] }}</a>
-                · {{ date('d/m/Y', strtotime($evento['data'])) }}
-            </li>
+            <x-cartao-evento :evento="$evento" />
         @empty
-            <li>Ainda não há eventos marcados.</li>
+            <x-alerta>Ainda não há eventos marcados.</x-alerta>
         @endforelse
-    </ul>
+    </div>
 @endsection
