@@ -8,11 +8,11 @@
     @endif
 
     <h1>{{ $evento->titulo }}</h1>
-    <p>Tipo: {{ $evento->tipo }}</p>
+    <p>Tipo: <a href="{{ route('tipos.show', $evento->tipo) }}">{{ $evento->tipo->nome }}</a></p>
     <p>Data: {{ $evento->data->format('d/m/Y') }}</p>
     <p>Local: {{ $evento->local }}</p>
     <p>Inscritos: {{ $evento->inscritos }} de {{ $evento->vagas }}</p>
-    @if (!empty($evento->descricao))
+    @if ($evento->descricao)
         <p>{{ $evento->descricao }}</p>
     @endif
     <p><a href="{{ route('eventos.index') }}">Voltar aos eventos</a></p>
